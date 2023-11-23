@@ -51,6 +51,10 @@
 ### - Que tipo de variação ocorre dentro das minhas variáveis?
 ### - Que tipo de covariação ocorre entre as minhas variáveis?
 
+# Carregar pacotes necessários -------------------------------------------------------------------------------------------------------------
+
+library(tidyverse)
+
 # Variação ---------------------------------------------------------------------------------------------------------------------------------
 
 ### Variation is the tendency of the values of a variable to change from 
@@ -65,7 +69,6 @@
 ### Vamos iniciar visualizando a variação no peso de diamantes do dataset
 ### diamonds. Como carat é uma variável numérica, podemos usar um histograma.
 
-library(ggplot2)
 ggplot(diamonds, aes(x = carat)) +
   geom_histogram(binwidth = 0.5)
 
@@ -82,7 +85,6 @@ ggplot(diamonds, aes(x = carat)) +
 
 ### Vamos observar a distribuição de pequenos diamantes:
 
-library(dplyr)
 smaller <- diamonds |> 
   filter(carat < 3)
 
@@ -156,3 +158,21 @@ unusual
 ### você não deve abandoná-los sem justificativa. Você precisará descobrir 
 ### o que os causou (por exemplo, um erro de entrada de dados) e divulgar 
 ### que os removeu em seu artigo.
+
+# Lidando com valores atípicos -------------------------------------------------------------------------------------------------------------
+
+### Se você encontrou valores atípicos no sei conjunto de dados e deseja
+### prosseguir com suas análises, você tem duas opções:
+
+### Eliminar a linha inteira com os valores estranhos.
+
+diamonds2 <- diamonds |> 
+  filter(between(y, 3, 20))
+view(diamonds2)
+
+### Não recomendamos esta opção porque um valor inválido não implica que todos 
+### os outros valores para essa observação também sejam inválidos. Além disso, 
+### se você tiver dados de baixa qualidade, ao aplicar essa abordagem a todas 
+### as variáveis, você poderá descobrir que não tem mais dados!
+
+
