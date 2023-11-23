@@ -27,4 +27,8 @@
 ### vezes é vaga, do que uma resposta exata à pergunta errada, que sempre 
 ### pode ser precisa." - John Tukey.
 
-Seu objetivo durante a EDA é desenvolver uma compreensão dos seus dados. A maneira mais fácil de fazer isso é usar perguntas como ferramentas para orientar sua investigação. Quando você faz uma pergunta, ela concentra sua atenção em uma parte específica do seu conjunto de dados e ajuda você a decidir quais gráficos, modelos ou transformações fazer.
+### Seu objetivo durante a EDA é desenvolver uma compreensão dos seus dados. 
+### A maneira mais fácil de fazer isso é usar perguntas como ferramentas para
+### orientar sua investigação. Quando você faz uma pergunta, ela concentra 
+### sua atenção em uma parte específica do seu conjunto de dados e ajuda 
+### você a decidir quais gráficos, modelos ou transformações fazer.
