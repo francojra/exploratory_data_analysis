@@ -175,4 +175,11 @@ view(diamonds2)
 ### se você tiver dados de baixa qualidade, ao aplicar essa abordagem a todas 
 ### as variáveis, você poderá descobrir que não tem mais dados!
 
+### Ao invés, nós recomendamos substituir os valores atípicos por missing values,
+### ou seja, por NAs. O caminho mais fácil para fazer isso, é usar a função
+### mutate() para substituir os valores atípicos da variável.Você também pode
+### usar o if_else() para substituir os valores atípicos por NA.
 
+diamonds2 <- diamonds |> 
+  mutate(y = if_else(y < 3 | y > 20, NA, y))
+view(diamonds2)
