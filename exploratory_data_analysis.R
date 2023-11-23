@@ -42,3 +42,11 @@
 ### aspecto dos seus dados e aumentar suas chances de fazer uma descoberta.
 ### Você pode detalhar rapidamente as partes mais interessantes dos seus 
 ### dados — e desenvolver um conjunto de perguntas instigantes.
+
+### Não há regra sobre quais perguntas você deve fazer para orientar sua 
+### pesquisa. No entanto, dois tipos de perguntas sempre serão úteis para 
+### fazer descobertas em seus dados. Você pode formular essas perguntas 
+### livremente como:
+
+### - Que tipo de variação ocorre dentro das minhas variáveis?
+### - Que tipo de covariação ocorre entre as minhas variáveis?
