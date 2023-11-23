@@ -6,7 +6,7 @@
 
 # Introdução -------------------------------------------------------------------------------------------------------------------------------
 
-### A análise exploratória dos dados serve para:
+### A análise exploratória dos dados (EDA) serve para:
 
 ### 1 - Gerar questões sobre os seus dados;
 ### 2 - Encontrar respostas visualizando, transformando e modelando os dados;
@@ -32,3 +32,13 @@
 ### orientar sua investigação. Quando você faz uma pergunta, ela concentra 
 ### sua atenção em uma parte específica do seu conjunto de dados e ajuda 
 ### você a decidir quais gráficos, modelos ou transformações fazer.
+
+### A chave para fazer perguntas de qualidade é gerar uma grande quantidade 
+### de perguntas. É difícil fazer perguntas reveladoras no início da sua 
+### análise porque você não sabe quais insights podem ser obtidos do seu 
+### conjunto de dados.
+
+### Por outro lado, cada nova pergunta que você fizer irá expô-lo a um novo 
+### aspecto dos seus dados e aumentar suas chances de fazer uma descoberta.
+### Você pode detalhar rapidamente as partes mais interessantes dos seus 
+### dados — e desenvolver um conjunto de perguntas instigantes.
