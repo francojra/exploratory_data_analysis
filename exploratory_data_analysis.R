@@ -50,3 +50,48 @@
 
 ### - Que tipo de variação ocorre dentro das minhas variáveis?
 ### - Que tipo de covariação ocorre entre as minhas variáveis?
+
+# Variação ---------------------------------------------------------------------------------------------------------------------------------
+
+### Variation is the tendency of the values of a variable to change from 
+### measurement to measurement. You can see variation easily in real life; 
+### if you measure any continuous variable twice, you will get two different 
+### results.
+
+### Every variable has its own pattern of variation, which can reveal 
+### interesting information about how that it varies between measurements 
+### on the same observation as well as across observations.
+
+### Vamos iniciar visualizando a variação no peso de diamantes do dataset
+### diamonds. Como carat é uma variável numérica, podemos usar um histograma.
+
+library(ggplot2)
+ggplot(diamonds, aes(x = carat)) +
+  geom_histogram(binwidth = 0.5)
+
+# Valores típicos --------------------------------------------------------------------------------------------------------------------------
+
+### In both bar charts and histograms, tall bars show the common values of
+### a variable, and shorter bars show less-common values. 
+
+### Which values are the most common? Why?
+
+### Which values are rare? Why? Does that match your expectations?
+
+### Can you see any unusual patterns? What might explain them?
+
+### Vamos observar a distribuição de pequenos diamantes:
+
+library(dplyr)
+smaller <- diamonds |> 
+  filter(carat < 3)
+
+ggplot(smaller, aes(x = carat)) +
+  geom_histogram(binwidth = 0.01)
+
+### This histogram suggests several interesting questions:
+
+### Why are there more diamonds at whole carats and common fractions of carats?
+
+### Why are there more diamonds slightly to the right of each peak than 
+### there are slightly to the left of each peak?
