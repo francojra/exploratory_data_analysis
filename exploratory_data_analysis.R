@@ -127,3 +127,23 @@ ggplot(diamonds, aes(x = y)) +
 ### que funcionam de maneira um pouco diferente: elas jogam fora os dados fora 
 ### dos limites.
 
+### Isso nos permite ver que existem três valores incomuns: 0, ~30 
+### e ~60. Nós os arrancamos com dplyr:
+
+unusual <- diamonds |> 
+  filter(y < 3 | y > 20) |> 
+  select(price, x, y, z) |>
+  arrange(y)
+unusual
+
+### A variável y mede uma das três dimensões desses diamantes, em mm. 
+### Sabemos que os diamantes não podem ter largura de 0 mm, então esses 
+### valores devem estar incorretos. Ao fazer EDA, descobrimos dados 
+### faltantes codificados como 0, que nunca teríamos encontrado 
+### simplesmente procurando por NAs.
+
+### No futuro, poderemos optar por recodificar estes valores como NAs, a 
+### fim de evitar cálculos enganosos. Também podemos suspeitar que as 
+### medidas de 32 mm e 59 mm são implausíveis: esses diamantes têm mais 
+### de uma polegada de comprimento, mas não custam centenas de milhares 
+### de dólares!
