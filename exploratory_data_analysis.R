@@ -147,3 +147,12 @@ unusual
 ### medidas de 32 mm e 59 mm são implausíveis: esses diamantes têm mais 
 ### de uma polegada de comprimento, mas não custam centenas de milhares 
 ### de dólares!
+
+### É uma boa prática repetir sua análise com e sem valores discrepantes. 
+### Se eles tiverem um efeito mínimo nos resultados e você não conseguir 
+### descobrir por que estão ali, é razoável omiti-los e seguir em frente.
+
+### No entanto, se eles tiverem um efeito substancial nos seus resultados,
+### você não deve abandoná-los sem justificativa. Você precisará descobrir 
+### o que os causou (por exemplo, um erro de entrada de dados) e divulgar 
+### que os removeu em seu artigo.
