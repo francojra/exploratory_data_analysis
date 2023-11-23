@@ -95,3 +95,35 @@ ggplot(smaller, aes(x = carat)) +
 
 ### Why are there more diamonds slightly to the right of each peak than 
 ### there are slightly to the left of each peak?
+
+# Valores atípicos -------------------------------------------------------------------------------------------------------------------------
+
+### Outliers são observações atípicas, pontos de dados que não estão ajustados
+### ao padrão. Algumas vezes outliers são erros de entrada de dados. Algumas vezes
+### são apenas valores extermos coletados e observados. Outras vezes, pode revelar
+### importantes descobertas. Quando você tem muitos dados, fica difícil ver os
+### outliers em histogramas
+
+### Por exemplo, pegue a distribuição da variável y do conjunto de dados de 
+### diamantes. A única evidência de valores discrepantes são os limites 
+### incomumente amplos no eixo x.
+
+ggplot(diamonds, aes(x = y)) + 
+  geom_histogram(binwidth = 0.5)
+
+### Há tantas observações nas caixas comuns que as caixas raras são muito curtas,
+### tornando muito difícil vê-las (embora talvez se você olhar atentamente 
+### para 0 você encontre algo).
+
+### Para facilitar a visualização dos valores incomuns, precisamos ampliar para 
+### valores pequenos do eixo y com coord_cartesian():
+
+ggplot(diamonds, aes(x = y)) + 
+  geom_histogram(binwidth = 0.5) +
+  coord_cartesian(ylim = c(0, 50))
+
+### coord_cartesian() também possui um argumento xlim() para quando você 
+### precisar ampliar o eixo x. ggplot2 também possui funções xlim() e ylim() 
+### que funcionam de maneira um pouco diferente: elas jogam fora os dados fora 
+### dos limites.
+
