@@ -212,3 +212,7 @@ nycflights13::flights |>
   ) |> 
   ggplot(aes(x = sched_dep_time)) + 
   geom_freqpoly(aes(color = cancelled), binwidth = 1/4)
+
+### No entanto, este gráfico não é bom porque há muito mais voos não 
+### cancelados do que voos cancelados. Na próxima seção exploraremos algumas 
+### técnicas para melhorar essa comparação.
