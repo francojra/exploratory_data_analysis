@@ -183,3 +183,32 @@ view(diamonds2)
 diamonds2 <- diamonds |> 
   mutate(y = if_else(y < 3 | y > 20, NA, y))
 view(diamonds2)
+
+### O ggplot2 não inclui os valores ausentes no gráfico, mas avisa que eles 
+### foram removidos:
+
+ggplot(diamonds2, aes(x = x, y = y)) + 
+  geom_point()
+
+### Para suprimir esse aviso, defina na.rm = TRUE:
+
+ggplot(diamonds2, aes(x = x, y = y)) + 
+  geom_point(na.rm = TRUE)
+
+### Outras vezes, você deseja entender o que torna as observações com valores 
+### ausentes diferentes das observações com valores registrados. Por exemplo, 
+### em nycflights13::flights1, valores ausentes na variável dep_time indicam 
+### que o voo foi cancelado. Portanto, você pode querer comparar os horários 
+### de partida programados para horários cancelados e não cancelados. Você 
+### pode fazer isso criando uma nova variável, usando is.na() para verificar 
+### se dep_time está faltando.
+
+nycflights13::flights |> 
+  mutate(
+    cancelled = is.na(dep_time),
+    sched_hour = sched_dep_time %/% 100,
+    sched_min = sched_dep_time %% 100,
+    sched_dep_time = sched_hour + (sched_min / 60)
+  ) |> 
+  ggplot(aes(x = sched_dep_time)) + 
+  geom_freqpoly(aes(color = cancelled), binwidth = 1/4)
