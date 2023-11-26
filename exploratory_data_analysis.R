@@ -255,3 +255,14 @@ ggplot(diamonds, aes(x = price, y = after_stat(density))) +
 ### os polígonos de frequência são um pouco difíceis de interpretar – há muita 
 ### coisa acontecendo neste gráfico.
 
+### Um gráfico visualmente mais simples para explorar essa relação são os boxplot
+### lado a lado.
+
+ggplot(diamonds, aes(x = cut, y = price)) +
+  geom_boxplot()
+
+### Agora nós vemos muito menos informações sobre a distribuição, mas os boxplots
+### são mais compactos uma comparação mais fácil entre eles. Isto apoia a descoberta 
+### contra-intuitiva de que diamantes de melhor qualidade são normalmente mais 
+### baratos! Nos exercícios, você será desafiado a descobrir o porquê.
+
