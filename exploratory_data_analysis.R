@@ -23,6 +23,8 @@
 ### Para fazer a limpeza de dados, você precisará implantar todas as 
 ### ferramentas de EDA: visualização, transformação e modelagem.
 
+# Questões ---------------------------------------------------------------------------------------------------------------------------------
+
 ### "É muito melhor uma resposta aproximada à pergunta certa, que muitas 
 ### vezes é vaga, do que uma resposta exata à pergunta errada, que sempre 
 ### pode ser precisa." - John Tukey.
