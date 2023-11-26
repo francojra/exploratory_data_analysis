@@ -277,6 +277,18 @@ ggplot(diamonds, aes(x = cut, y = price)) +
 ggplot(mpg, aes(x = class, y = hwy)) +
   geom_boxplot()
 
+### Para tornar a tendência mais fácil de visualizar, nós podemos reordenar as classes
+### baseado no valor mediano de hwy:
+
+ggplot(mpg, aes(x = fct_reorder(class, hwy, median), y = hwy)) +
+  geom_boxplot()
+
+### Se você tem nomes longos de variáveis, geom_boxplot() irá trabalhar melhor se você
+### virar em 90º. Você pode fazer isso trocando os eixos x e y.
+
+ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
+  geom_boxplot()
+
 
 
 
