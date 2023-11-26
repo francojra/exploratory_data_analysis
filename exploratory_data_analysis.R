@@ -216,3 +216,10 @@ nycflights13::flights |>
 ### No entanto, este gráfico não é bom porque há muito mais voos não 
 ### cancelados do que voos cancelados. Na próxima seção exploraremos algumas 
 ### técnicas para melhorar essa comparação.
+
+# Covariação -------------------------------------------------------------------------------------------------------------------------------
+
+### Se variação descreve o comportamento dentro de uma variável, covariação descreve
+### o comportamento entre variáveis. Covariação é a tendência em que os valores de
+### duas ou mais variáveis variam juntas em um caminho relacionado. O melhor caminho
+### para ver a covariação é visualizar a relação entre duas ou mais variáveis.
