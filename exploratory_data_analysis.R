@@ -231,3 +231,10 @@ nycflights13::flights |>
 
 ggplot(diamonds, aes(x = price)) + 
   geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
+
+### Note que o ggplot2 usa uma escala de cor ordenada para cut porque ele está definido
+### como um fator ordenado nos dados. Você irá aprender mais sobre isso na seção 16.6.
+
+### A aparência padrão de geom_freqpoly() não é tão útil aqui porque a altura, 
+### determinada pela contagem geral, difere muito entre os cortes, tornando difícil 
+### ver as diferenças nas formas de suas distribuições.
