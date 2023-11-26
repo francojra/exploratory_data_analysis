@@ -238,3 +238,10 @@ ggplot(diamonds, aes(x = price)) +
 ### A aparência padrão de geom_freqpoly() não é tão útil aqui porque a altura, 
 ### determinada pela contagem geral, difere muito entre os cortes, tornando difícil 
 ### ver as diferenças nas formas de suas distribuições.
+
+### Para fazer a comparação mais fácil nós necessitamos trocar o que está no eixo y.
+### Ao invés da contagem (frequência), nós iremos exibir a densidade (density), que
+### é a contagem padronizada para que a área sob cada polígono de frequência seja um.
+
+ggplot(diamonds, aes(x = price, y = after_stat(density))) + 
+  geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
