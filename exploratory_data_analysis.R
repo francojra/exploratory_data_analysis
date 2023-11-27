@@ -339,7 +339,15 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ### (Nesta seção usaremos o conjunto de dados menor para manter o foco na 
 ### maior parte dos diamantes menores que 3 quilates)
 
+### Gráficos de dispersão se tornam menos usuais a medida que seu conjunto
+### de dados cresce, porque os pontos se acumulam, e se amontoam em áreas 
+### de preto uniforme, tornando difícil julgar diferenças na densidade dos
+### dados em torno do espaço bidimensional, bem como difícil de ver a 
+### tendência. Você já tem visto uma forma de corrigir esse problema: usando
+### usando a estética (aesthetic) alpha e adicionando transparência.
 
+ggplot(smaller, aes(x = carat, y = price)) + 
+  geom_point(alpha = 1 / 100)
 
 
 
