@@ -310,4 +310,10 @@ ggplot(diamonds, aes(x = cut, y = color)) +
 diamonds |> 
   count(color, cut)
 
+### Em seguida, visualize com geom_tile() e a estética (aesthetic) de preechimento:
+
+diamonds |> 
+  count(color, cut) |>  
+  ggplot(aes(x = color, y = cut)) +
+  geom_tile(aes(fill = n))
 
