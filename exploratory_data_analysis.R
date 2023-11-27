@@ -366,5 +366,11 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ggplot(smaller, aes(x = carat, y = price)) +
   geom_hex()
 
+### Outra opção é agrupar uma variável contínua para que ela atue como uma variável 
+### categórica. Então você usa uma das técnicas para visualizar a combinação
+### de uma variável categórica e uma contínua que você aprendeu antes. Por exemplo,
+### você poderia agrupar carat, e então para cada grupo exibir um boxplot:
 
+ggplot(smaller, aes(x = carat, y = price)) + 
+  geom_boxplot(aes(group = cut_width(carat, 0.1)))
 
