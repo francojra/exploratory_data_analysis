@@ -321,3 +321,26 @@ diamonds |>
 ### seriação para reordenar simultaneamente as linhas e colunas para revelar padrões
 ### interessantes com mais clareza. Para gráficos maiores, você pode querer usar o
 ### pacote heatmaply, que cria gráficos interativos.
+
+### Duas variáveis numéricas: -------------------------------------------
+
+### Você já viu uma ótima maneira de visualizar a covariação entre duas variáveis 
+### numéricas: desenhar um gráfico de dispersão com geom_point(). Você pode ver a
+### covariação com o padrão dos pontos. Por exemplo, você pode ver uma relação positiva
+### entre tamanho de carat e preço do diamante: diamantes com mais carat tem preços
+### mais altos. A relação é exponencial.
+
+smaller <- diamonds |> 
+  filter(carat < 3)
+
+ggplot(smaller, aes(x = carat, y = price)) +
+  geom_point()
+
+### (Nesta seção usaremos o conjunto de dados menor para manter o foco na 
+### maior parte dos diamantes menores que 3 quilates)
+
+
+
+
+
+
