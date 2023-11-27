@@ -226,7 +226,7 @@ nycflights13::flights |>
 ### duas ou mais variáveis variam juntas em um caminho relacionado. O melhor caminho
 ### para ver a covariação é visualizar a relação entre duas ou mais variáveis.
 
-### Uma variável categórica e uma numérica:
+### Uma variável categórica e uma numérica: -----------------
 
 ### Por exemplo, vamos explorar como o preço do diamante varia com a qualidade dele
 ### (medida pelo corte (cut)) usando geom_frenqpoly()
@@ -291,6 +291,13 @@ ggplot(mpg, aes(x = fct_reorder(class, hwy, median), y = hwy)) +
 ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
   geom_boxplot()
 
+### Duas variáveis categóricas: -------------------------------
 
+### Para visualizar a covariação entre duas variáveis categóricas, você irá necessitar
+### contar o número de observações para cada combinação dos níveis dessas variáveis
+### categóricas. Uma maneira de fazer isso é contar com o geom_count() integrado:
+
+ggplot(diamonds, aes(x = cut, y = color)) +
+  geom_count()
 
 
