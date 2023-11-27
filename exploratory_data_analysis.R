@@ -300,4 +300,14 @@ ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
 ggplot(diamonds, aes(x = cut, y = color)) +
   geom_count()
 
+### O tamanho de cada círculo no gráfico exibe quantas observações ocorrem em cada
+### combinação de valores. A covariação aparecerá como uma forte correlação entre
+### valores específicos de x e valores específicos de y.
+
+### Outra abordagem para explorar a relação entre essas variáveis é calcular as
+### contagens com dplyr:
+
+diamonds |> 
+  count(color, cut)
+
 
