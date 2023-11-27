@@ -317,3 +317,7 @@ diamonds |>
   ggplot(aes(x = color, y = cut)) +
   geom_tile(aes(fill = n))
 
+### Se as variáveis categóricas estão desordenadas, você pode querer usar o pacote de 
+### seriação para reordenar simultaneamente as linhas e colunas para revelar padrões
+### interessantes com mais clareza. Para gráficos maiores, você pode querer usar o
+### pacote heatmaply, que cria gráficos interativos.
