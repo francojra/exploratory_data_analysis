@@ -349,6 +349,22 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ggplot(smaller, aes(x = carat, y = price)) + 
   geom_point(alpha = 1 / 100)
 
+### Mas usar transparência pode ser desafiador para conjunto de dados grandes.
+### Outra solução é usar o bin (compartimentos/caixas). Previamente, você usou geom_histogram() e 
+### geom_freqpoly() para bin em uma dimensão. Agora você irá aprender como usar
+### geom_bin2d() e geom_hex() para bin em duas dimensões.
+
+### geom_bin2d() e geom_hex() divide o plano de coordenadas em bins 2D e então
+### usa um preenchimento de cor para exibir quantos pontos caem em cada bin.
+### geom_bin2d() cria bins retangulares e geom_hex() cria bins hexagonais.
+### Você irá necessitar instalar o pacote hexbin para usar geom_hex().
+
+ggplot(smaller, aes(x = carat, y = price)) +
+  geom_bin2d()
+
+# install.packages("hexbin")
+ggplot(smaller, aes(x = carat, y = price)) +
+  geom_hex()
 
 
 
