@@ -411,8 +411,22 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ### em log. Depois, exponenciamos os resíduos para colocá-los de volta na escala de 
 ### preços brutos.
 
+library(tidymodels)
 
+diamonds <- diamonds |>
+  mutate(
+    log_price = log(price),
+    log_carat = log(carat)
+  )
 
+diamonds_fit <- linear_reg() |>
+  fit(log_price ~ log_carat, data = diamonds)
+
+diamonds_aug <- augment(diamonds_fit, new_data = diamonds) |>
+  mutate(.resid = exp(.resid))
+
+ggplot(diamonds_aug, aes(x = carat, y = .resid)) + 
+  geom_point()
 
 
 
