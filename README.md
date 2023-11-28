@@ -13,4 +13,5 @@
 5. Valores atípicos;
 6. Lidando com valores atípicos;
 7. Covariação;
-8. 
+8. Padrões e modelos;
+9. Resumo.
