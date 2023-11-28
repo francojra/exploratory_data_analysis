@@ -392,6 +392,13 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ### - Quais outras variáveis podem afetar a relação?
 ### - O relacionamento muda se você observar subgrupos individuais de dados?
 
+### Os padrões nos seus dados revelam relações, por exemplo, eles revelam covariação.
+### Se pensarmos na variação como um fenômeno que cria incerteza, covariação é
+### um fenômeno que reduz ela. Se duas variáveis covariam, você pode usar os valores
+### de uma variável para fazer melhores previsões sobre os valores da segunda. Se a
+### covariação é uma relação causal (um caso especial), então você pode usar o valor
+### de uma variável para controlar o valor da segunda.
+
 
 
 
