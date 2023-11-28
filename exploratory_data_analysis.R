@@ -428,9 +428,20 @@ diamonds_aug <- augment(diamonds_fit, new_data = diamonds) |>
 ggplot(diamonds_aug, aes(x = carat, y = .resid)) + 
   geom_point()
 
+### Uma vez que você tem removido a forte relação entre quilate e preço,
+### você pode ver o esperado da relação entre corte e preço: relativo ao
+### tamanho deles, diamantes de melhor qualidade (corte) são mais caros.
 
+ggplot(diamonds_aug, aes(x = cut, y = .resid)) + 
+  geom_boxplot()
 
+### Nós não discutimos modelagem nesse livro porque entender o que são os 
+### modelos e como eles trabalham é mais fácil uma vez que você tem ferramentas
+### de organização de dados (data wrangling) e programação em mãos.
 
+# Resumo -----------------------------------------------------------------------------------------------------------------------------------
+
+### 
 
 
 
