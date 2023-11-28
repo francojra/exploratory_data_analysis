@@ -399,6 +399,20 @@ ggplot(smaller, aes(x = carat, y = price)) +
 ### covariação é uma relação causal (um caso especial), então você pode usar o valor
 ### de uma variável para controlar o valor da segunda.
 
+### Os modelos são ferramentas para extrair padrões dos dados. Por exemplo, considere
+### os dados diamonds. É difícil entender a relação entre corte e preço, porque corte
+### e quilate, e quilate e preço são intimamente relacionados. É possível usar o modelo
+### para remover a forte relação entre preço e quilate então nós podemos explorar as
+### complexidades que permanecem. O seguinte código ajusta o modelo que prediz preço de
+### quilate e então calcula os resíduos (a diferença entre o valor predito e o valor real).
+### Os resíduos nos dão uma visão do preço do diamante, uma vez que o efeito do quilate
+### tem sido removido. Note que ao invés de usar os valores das linhas de preço e quilate,
+### nós transformamos em log primeiro, e ajustamos o modelo aos valores transformados
+### em log. Depois, exponenciamos os resíduos para colocá-los de volta na escala de 
+### preços brutos.
+
+
+
 
 
 
