@@ -441,7 +441,15 @@ ggplot(diamonds_aug, aes(x = cut, y = .resid)) +
 
 # Resumo -----------------------------------------------------------------------------------------------------------------------------------
 
-### 
+### Nesse capítulo você tem aprendido uma variedade de ferramentas para ajudar
+### você a entender a variação dentro dos dados. Você tem visto técnicas que
+### trabalham com uma única variável no tempo e com um par de variáveis. Isso
+### pode parecer dolorosamente restritivo se você tem dezenas ou centenas de
+### variáveis nos seus dados, mas elas são a base sobre a qual todas as outras
+### técnicas são construídas.
+
+### No próximo capítulo, nós focaremos sobre ferramentas que podemos usar para
+### comunicar nossos resultados.
 
 
 
