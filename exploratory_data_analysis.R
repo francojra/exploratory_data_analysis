@@ -87,7 +87,8 @@ library(tidyverse)
 ### tempos (por exemplo, os níveis de energia de um elétron em diferentes momentos).
 ### Cada variável tem seu próprio padrão de variação, que pode revelar interessantes
 ### informações sobre como isso varia entre medições na mesma observação, bem como 
-### entre observações.
+### entre observações.A melhor forma de entender o padrão é visualizando a distribuição
+### dos valores da variável, que você tem aprendido sobre no capítulo 1.
 
 ### Every variable has its own pattern of variation, which can reveal 
 ### interesting information about how that it varies between measurements 
