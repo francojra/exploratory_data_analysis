@@ -31,7 +31,18 @@
 ### de dados, você irá necessitar implementar todas as ferramentas da EDA:
 ### visualização, transformação e modelagem.
 
+# Pré-requisitos ---------------------------------------------------------------------------------------------------------------------------
+
+### Nesse capítulo, nós iremos combinar o que você tem aprendido sobre dplyr e 
+### ggplot2 para fazer perguntas interativamente, respondê-las com dados e,
+### sem seguida, fazer novas perguntas.
+
+library(tidyverse)
+
 # Questões ---------------------------------------------------------------------------------------------------------------------------------
+
+### "Não existem questões estatísticas rotineiras, apenas rotinas estatísticas 
+### questionáveis.” -Sir David Cox 
 
 ### "É muito melhor uma resposta aproximada à pergunta certa, que muitas 
 ### vezes é vaga, do que uma resposta exata à pergunta errada, que sempre 
@@ -43,15 +54,14 @@
 ### sua atenção em uma parte específica do seu conjunto de dados e ajuda 
 ### você a decidir quais gráficos, modelos ou transformações fazer.
 
-### A chave para fazer perguntas de qualidade é gerar uma grande quantidade 
-### de perguntas. É difícil fazer perguntas reveladoras no início da sua 
+### EDA é fundamentalmente um processo criativo. E como a maioria dos processos
+### criativos, a chave para fazer perguntas de qualidade é gerar uma grande 
+### quantidade de perguntas. É difícil fazer perguntas reveladoras no início da sua 
 ### análise porque você não sabe quais insights podem ser obtidos do seu 
-### conjunto de dados.
-
-### Por outro lado, cada nova pergunta que você fizer irá expô-lo a um novo 
-### aspecto dos seus dados e aumentar suas chances de fazer uma descoberta.
-### Você pode detalhar rapidamente as partes mais interessantes dos seus 
-### dados — e desenvolver um conjunto de perguntas instigantes.
+### conjunto de dados.aspecto dos seus dados e aumentar suas chances de fazer uma 
+### descoberta. Você pode detalhar rapidamente as partes mais interessantes dos seus 
+### dados — e desenvolver um conjunto de perguntas instigantes - se você 
+### acompanhar cada pergunta com uma nova pergunta com base no que encontrar.
 
 ### Não há regra sobre quais perguntas você deve fazer para orientar sua 
 ### pesquisa. No entanto, dois tipos de perguntas sempre serão úteis para 
@@ -60,10 +70,6 @@
 
 ### - Que tipo de variação ocorre dentro das minhas variáveis?
 ### - Que tipo de covariação ocorre entre as minhas variáveis?
-
-# Carregar pacotes necessários -------------------------------------------------------------------------------------------------------------
-
-library(tidyverse)
 
 # Variação ---------------------------------------------------------------------------------------------------------------------------------
 
