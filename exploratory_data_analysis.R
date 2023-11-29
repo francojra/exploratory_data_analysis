@@ -25,10 +25,11 @@
 
 ### A EDA é uma parte importante de qualquer análise de dados, mesmo que 
 ### as principais questões de pesquisa sejam entregues a você de bandeja,
-### porque você sempre precisa investigar a qualidade dos seus dados.
-
-### Para fazer a limpeza de dados, você precisará implantar todas as 
-### ferramentas de EDA: visualização, transformação e modelagem.
+### porque você sempre precisa investigar a qualidade dos seus dados. Limpeza
+### de dados é apenas uma das aplicações da EDA: você se questiona sobre se
+### seus dados vão de encontro às suas expectativas ou não. Para fazer limpeza
+### de dados, você irá necessitar implementar todas as ferramentas da EDA:
+### visualização, transformação e modelagem.
 
 # Questões ---------------------------------------------------------------------------------------------------------------------------------
 
