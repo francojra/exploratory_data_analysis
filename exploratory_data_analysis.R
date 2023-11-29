@@ -77,10 +77,17 @@ library(tidyverse)
 
 # Variação ---------------------------------------------------------------------------------------------------------------------------------
 
-### Variation is the tendency of the values of a variable to change from 
-### measurement to measurement. You can see variation easily in real life; 
-### if you measure any continuous variable twice, you will get two different 
-### results.
+### Variação é a tendência dos valores de uma variável mudar de medida para medida.
+### Você pode ver variações facilmente na vida real; se você medir qualquer
+### variável contínua duas vezes, você obterá dois diferentes resultados.
+### Isso é verdade mesmo se você mede quantidades constantes, como a velocidade
+### da luz. Cada uma de suas medidas irá incluir uma pequena quantidade de
+### de erro que varia de medida a medida. Variáveis também muda se você mede
+### diferentes objetos (por exemplo, cor dos olhos de diferentes pessoas) ou diferentes
+### tempos (por exemplo, os níveis de energia de um elétron em diferentes momentos).
+### Cada variável tem seu próprio padrão de variação, que pode revelar interessantes
+### informações sobre como isso varia entre medições na mesma observação, bem como 
+### entre observações.
 
 ### Every variable has its own pattern of variation, which can reveal 
 ### interesting information about how that it varies between measurements 
