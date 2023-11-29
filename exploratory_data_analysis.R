@@ -71,6 +71,10 @@ library(tidyverse)
 ### - Que tipo de variação ocorre dentro das minhas variáveis?
 ### - Que tipo de covariação ocorre entre as minhas variáveis?
 
+### O restante deste capítulo examinará essas duas questões. Explicaremos o 
+### que são variação e covariação e mostraremos várias maneiras de responder 
+### a cada pergunta.
+
 # Variação ---------------------------------------------------------------------------------------------------------------------------------
 
 ### Variation is the tendency of the values of a variable to change from 
