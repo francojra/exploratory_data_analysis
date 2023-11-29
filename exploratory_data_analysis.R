@@ -109,21 +109,21 @@ ggplot(diamante, aes(x = quilate)) +
 
 # Valores típicos --------------------------------------------------------------------------------------------------------------------------
 
-### In both bar charts and histograms, tall bars show the common values of
-### a variable, and shorter bars show less-common values. 
+### Em ambos gráficos de barras e histogramas, barras altas mostram valores comuns
+### de uma variável, e barras mais curtas mostram valores menos comuns. Locais que
+### não tem barras revelam valores que não foram vistos nos seus dados. Para transformar
+### essas informações em perguntas úteis, observe qualquer coisa não esperada:
 
-### Which values are the most common? Why?
+### - Quais valores são os mais comuns? Por quê?
+### - Quais valores são raros? Por quê? Isso corresponde às suas expectativas?
+### - Você consegue ver padrões incomuns? O que pode explicar eles?
 
-### Which values are rare? Why? Does that match your expectations?
+### Vamos observar a distribuição de quilate para pequenos diamantes:
 
-### Can you see any unusual patterns? What might explain them?
+menores_diamantes <- diamante |> 
+  filter(quilate < 3)
 
-### Vamos observar a distribuição de pequenos diamantes:
-
-smaller <- diamonds |> 
-  filter(carat < 3)
-
-ggplot(smaller, aes(x = carat)) +
+ggplot(menores_diamantes, aes(x = quilate)) +
   geom_histogram(binwidth = 0.01)
 
 ### This histogram suggests several interesting questions:
