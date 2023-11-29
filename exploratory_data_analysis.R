@@ -6,9 +6,12 @@
 
 # Introdução -------------------------------------------------------------------------------------------------------------------------------
 
-### A análise exploratória dos dados (EDA) serve para:
+### Esse capítulo mostrará a você como usar visualização e transformação para explorar
+### seus dados em uma forma sistemática, uma terfa que os estatísticos chamam de análise
+### exploratória dos dados, ou EDA (Exploratory Data Analysis) abreviamente. EDA é um 
+### ciclo iterativo. Você:
 
-### 1 - Gerar questões sobre os seus dados;
+### 1 - Gera questões sobre os seus dados.
 ### 2 - Encontrar respostas visualizando, transformando e modelando os dados;
 ### 3 - Usar o que aprendeu para refinar questões/gerar novas questões.
 
