@@ -100,6 +100,13 @@ view(diamante)
 ggplot(diamante, aes(x = quilate)) +
   geom_histogram(binwidth = 0.5)
 
+### Agora que você pode visualizar a variação, o que você deve observar em seus gráficos?
+### E que tipo de perguntas de acompanhamento você deve fazer? Nós temos colocado abaixo
+### uma lista dos tipos mais comuns de informações que você encontrará em seus gráficos,
+### junto com algumas perguntas de acompanhamento para cada tipo de informação. A chave
+### para fazer boas questões de acompanhamento irá depender da curiosidade (o que mais você
+### quer aprender?) bem como do seu ceticismo (Como isso pode ser enganoso?).
+
 # Valores típicos --------------------------------------------------------------------------------------------------------------------------
 
 ### In both bar charts and histograms, tall bars show the common values of
