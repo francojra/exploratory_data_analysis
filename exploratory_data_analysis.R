@@ -12,12 +12,16 @@
 ### ciclo iterativo. Você:
 
 ### 1 - Gera questões sobre os seus dados.
-### 2 - Encontrar respostas visualizando, transformando e modelando os dados;
-### 3 - Usar o que aprendeu para refinar questões/gerar novas questões.
+### 2 - Encontra respostas visualizando, transformando e modelando seus dados.
+### 3 - Usa o que aprendeu para refinar suas questões e/ou gerar novas questões.
 
-### Durante as fases iniciais da EDA, você deve se sentir à vontade para 
-### investigar cada ideia que lhe ocorrer. Algumas dessas ideias darão certo 
-### e outras serão becos sem saída.
+### A EDA não é um processo formal com um conjunto estrito de regras. Mais que 
+### qualquer coisa, EDA é um estado da mente. Durante as fases inicias da EDA
+### você deverá se sentir livre para investigar cada ideia que ocorre a você.
+### Algumas dessas ideias darão certo e outras serão becos sem saída. À medida 
+### que sua exploração continua, você se concentrará em alguns insights 
+### particularmente produtivos que eventualmente escreverá e comunicará 
+### a outras pessoas.
 
 ### A EDA é uma parte importante de qualquer análise de dados, mesmo que 
 ### as principais questões de pesquisa sejam entregues a você de bandeja,
