@@ -126,12 +126,13 @@ menores_diamantes <- diamante |>
 ggplot(menores_diamantes, aes(x = quilate)) +
   geom_histogram(binwidth = 0.01)
 
-### This histogram suggests several interesting questions:
+### Esse histograma sugere várias questões interessantes:
 
-### Why are there more diamonds at whole carats and common fractions of carats?
+### - Por que há mais diamantes em números inteiros de quilates e frações 
+### comuns de quilates?
 
-### Why are there more diamonds slightly to the right of each peak than 
-### there are slightly to the left of each peak?
+### - Por que há mais diamantes ligeiramente à direita de cada pico do que 
+### há ligeiramente à esquerda de cada pico?
 
 # Valores atípicos -------------------------------------------------------------------------------------------------------------------------
 
