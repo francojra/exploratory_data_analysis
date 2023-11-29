@@ -90,14 +90,14 @@ library(tidyverse)
 ### entre observações.A melhor forma de entender o padrão é visualizando a distribuição
 ### dos valores da variável, que você tem aprendido sobre no capítulo 1.
 
-### Every variable has its own pattern of variation, which can reveal 
-### interesting information about how that it varies between measurements 
-### on the same observation as well as across observations.
+### Vamos iniciar nossa exploração visualizando a variação nos pesos (quilate) 
+### de ~54,000 diamantes do pacote 'dados'. Como quilate é uma variável numérica, 
+### podemos usar um histograma.
 
-### Vamos iniciar visualizando a variação no peso de diamantes do dataset
-### diamonds. Como carat é uma variável numérica, podemos usar um histograma.
+library(dados)
+view(diamante)
 
-ggplot(diamonds, aes(x = carat)) +
+ggplot(diamante, aes(x = quilate)) +
   geom_histogram(binwidth = 0.5)
 
 # Valores típicos --------------------------------------------------------------------------------------------------------------------------
