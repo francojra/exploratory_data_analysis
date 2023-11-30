@@ -170,18 +170,18 @@ ggplot(diamante, aes(x = y)) +
   coord_cartesian(ylim = c(0, 50))
 
 ### coord_cartesian() também possui um argumento xlim() para quando você 
-### precisar ampliar o eixo x. ggplot2 também possui funções xlim() e ylim() 
+### precisar ampliar o eixo x. ggplot2 também possui as funções xlim() e ylim() 
 ### que funcionam de maneira um pouco diferente: elas jogam fora os dados fora 
 ### dos limites.
 
 ### Isso nos permite ver que existem três valores incomuns: 0, ~30 
-### e ~60. Nós os arrancamos com dplyr:
+### e ~60. Nós retiramos eles com dplyr:
 
-unusual <- diamonds |> 
+incomum <- diamante |> 
   filter(y < 3 | y > 20) |> 
-  select(price, x, y, z) |>
+  select(preco, x, y, z) |>
   arrange(y)
-unusual
+incomum
 
 ### A variável y mede uma das três dimensões desses diamantes, em mm. 
 ### Sabemos que os diamantes não podem ter largura de 0 mm, então esses 
