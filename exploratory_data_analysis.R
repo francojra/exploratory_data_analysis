@@ -140,6 +140,12 @@ ggplot(menores_diamantes, aes(x = quilate)) +
 ### - Como você pode explicar ou descrever os grupos?
 ### - Por que a aparência de agrupamentos pode ser enganadora?
 
+### Algumas dessas questões podem ser respondidas com os dados, enquanto outras 
+### irão requerer experiência de domínio sobre os dados. Muitas delas irão levar
+### você a explorar a relação entre variáveis, por exemplo, para ver se os valores
+### de uma variável podem explicar o comportamento de outra variável. Chegaremos
+### a isso em breve.
+
 # Valores atípicos -------------------------------------------------------------------------------------------------------------------------
 
 ### Outliers são observações atípicas, pontos de dados que não estão ajustados
