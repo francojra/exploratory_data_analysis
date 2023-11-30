@@ -216,19 +216,19 @@ diamante2 <- diamante |>
 ### se você tiver dados de baixa qualidade, ao aplicar essa abordagem a todas 
 ### as variáveis, você poderá descobrir que não tem mais dados!
 
-### 2 - Ao invés, nós recomendamos substituir os valores atípicos por missing values,
-### ou seja, por NAs. O caminho mais fácil para fazer isso, é usar a função
+### 2 - Ao invés, nós recomendamos substituir os valores atípicos por valores
+### faltantes (missing values). O caminho mais fácil para fazer isso, é usar a função
 ### mutate() para substituir os valores atípicos da variável.Você também pode
-### usar o if_else() para substituir os valores atípicos por NA.
+### usar o if_else() para substituir os valores atípicos por NA:
 
-diamonds2 <- diamonds |> 
+diamante2 <- diamante |> 
   mutate(y = if_else(y < 3 | y > 20, NA, y))
-view(diamonds2)
 
-### O ggplot2 não inclui os valores ausentes no gráfico, mas avisa que eles 
+### Não é óbvio onde você deve traçar os valores ausentes, então o ggplot2 não 
+### inclui os valores ausentes no gráfico, mas avisa que eles 
 ### foram removidos:
 
-ggplot(diamonds2, aes(x = x, y = y)) + 
+ggplot(diamante2, aes(x = x, y = y)) + 
   geom_point()
 
 ### Para suprimir esse aviso, defina na.rm = TRUE:
