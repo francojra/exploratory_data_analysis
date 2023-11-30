@@ -203,21 +203,20 @@ incomum
 
 # Lidando com valores atípicos -------------------------------------------------------------------------------------------------------------
 
-### Se você encontrou valores atípicos no sei conjunto de dados e deseja
-### prosseguir com suas análises, você tem duas opções:
+### Se você encontrou valores atípicos no seu conjunto de dados e simplesmente
+### deseja prosseguir com o restante das suas análises, você tem duas opções:
 
-### Eliminar a linha inteira com os valores estranhos.
+### 1 - Eliminar a linha inteira com os valores estranhos:
 
-diamonds2 <- diamonds |> 
+diamante2 <- diamante |> 
   filter(between(y, 3, 20))
-view(diamonds2)
 
 ### Não recomendamos esta opção porque um valor inválido não implica que todos 
 ### os outros valores para essa observação também sejam inválidos. Além disso, 
 ### se você tiver dados de baixa qualidade, ao aplicar essa abordagem a todas 
 ### as variáveis, você poderá descobrir que não tem mais dados!
 
-### Ao invés, nós recomendamos substituir os valores atípicos por missing values,
+### 2 - Ao invés, nós recomendamos substituir os valores atípicos por missing values,
 ### ou seja, por NAs. O caminho mais fácil para fazer isso, é usar a função
 ### mutate() para substituir os valores atípicos da variável.Você também pode
 ### usar o if_else() para substituir os valores atípicos por NA.
