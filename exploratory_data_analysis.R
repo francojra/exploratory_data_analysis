@@ -130,9 +130,16 @@ ggplot(menores_diamantes, aes(x = quilate)) +
 
 ### - Por que há mais diamantes em números inteiros de quilates e frações 
 ### comuns de quilates?
-
 ### - Por que há mais diamantes ligeiramente à direita de cada pico do que 
 ### há ligeiramente à esquerda de cada pico?
+
+### Visualizações também podem revelar agrupamentos, os quais sugerem que existem
+### subgrupos em seus dados. Para entender os subgrupos, questione:
+
+### - Como são as observações dentro de cada subgrupo similares uns aos outros?
+### - Como são as observações em grupos diferentes separados uns dos outros?
+### - Como você pode explicar ou descrever os grupos?
+### - Por que a aparência de agrupamentos pode ser enganadora?
 
 # Valores atípicos -------------------------------------------------------------------------------------------------------------------------
 
