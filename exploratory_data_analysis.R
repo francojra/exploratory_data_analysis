@@ -150,15 +150,14 @@ ggplot(menores_diamantes, aes(x = quilate)) +
 
 ### Outliers são observações atípicas, pontos de dados que não estão ajustados
 ### ao padrão. Algumas vezes outliers são erros de entrada de dados. Algumas vezes
-### são apenas valores extermos coletados e observados. Outras vezes, pode revelar
-### importantes descobertas. Quando você tem muitos dados, fica difícil ver os
-### outliers em histogramas
+### são apenas valores extremos que passaram a ser observados nesta coleta de dados,
+### e outras vezes, eles sugerem importantes novas descobertas.Quando você tem 
+### muitos dados, outliers são algumas vezes difícies de serem vistos em histogramas.
+### outliers em histogramas. Por exemplo, pegue a distribuição da variável y do 
+### conjunto de dados de diamante. A única evidência de valores discrepantes são 
+### os limites incomumente amplos no eixo x.
 
-### Por exemplo, pegue a distribuição da variável y do conjunto de dados de 
-### diamantes. A única evidência de valores discrepantes são os limites 
-### incomumente amplos no eixo x.
-
-ggplot(diamonds, aes(x = y)) + 
+ggplot(diamante, aes(x = y)) + 
   geom_histogram(binwidth = 0.5)
 
 ### Há tantas observações nas caixas comuns que as caixas raras são muito curtas,
