@@ -233,26 +233,26 @@ ggplot(diamante2, aes(x = x, y = y)) +
 
 ### Para suprimir esse aviso, defina na.rm = TRUE:
 
-ggplot(diamonds2, aes(x = x, y = y)) + 
+ggplot(diamante2, aes(x = x, y = y)) + 
   geom_point(na.rm = TRUE)
 
 ### Outras vezes, você deseja entender o que torna as observações com valores 
 ### ausentes diferentes das observações com valores registrados. Por exemplo, 
 ### em nycflights13::flights1, valores ausentes na variável dep_time indicam 
-### que o voo foi cancelado. Portanto, você pode querer comparar os horários 
+### que o voo foi cancelado. Então, você pode querer comparar os horários 
 ### de partida programados para horários cancelados e não cancelados. Você 
 ### pode fazer isso criando uma nova variável, usando is.na() para verificar 
 ### se dep_time está faltando.
 
-nycflights13::flights |> 
+dados::voos |> 
   mutate(
-    cancelled = is.na(dep_time),
-    sched_hour = sched_dep_time %/% 100,
-    sched_min = sched_dep_time %% 100,
-    sched_dep_time = sched_hour + (sched_min / 60)
+    cancelado = is.na(horario_saida),
+    hora_programada = saida_programada %/% 100,
+    min_programada = saida_programada %% 100,
+    saida_programada = hora_programada + (min_programada / 60)
   ) |> 
-  ggplot(aes(x = sched_dep_time)) + 
-  geom_freqpoly(aes(color = cancelled), binwidth = 1/4)
+  ggplot(aes(x = saida_programada)) + 
+  geom_freqpoly(aes(color = cancelado), binwidth = 1/4)
 
 ### No entanto, este gráfico não é bom porque há muito mais voos não 
 ### cancelados do que voos cancelados. Na próxima seção exploraremos algumas 
