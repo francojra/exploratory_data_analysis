@@ -160,14 +160,12 @@ ggplot(menores_diamantes, aes(x = quilate)) +
 ggplot(diamante, aes(x = y)) + 
   geom_histogram(binwidth = 0.5)
 
-### Há tantas observações nas caixas comuns que as caixas raras são muito curtas,
+### Há muitas observações nas caixas comuns que as caixas raras são muito curtas,
 ### tornando muito difícil vê-las (embora talvez se você olhar atentamente 
-### para 0 você encontre algo).
+### para 0 você encontre algo).Para facilitar a visualização dos valores incomuns, 
+### precisamos ampliar para os valores pequenos do eixo y com coord_cartesian():
 
-### Para facilitar a visualização dos valores incomuns, precisamos ampliar para 
-### valores pequenos do eixo y com coord_cartesian():
-
-ggplot(diamonds, aes(x = y)) + 
+ggplot(diamante, aes(x = y)) + 
   geom_histogram(binwidth = 0.5) +
   coord_cartesian(ylim = c(0, 50))
 
