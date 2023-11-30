@@ -95,7 +95,6 @@ library(tidyverse)
 ### podemos usar um histograma.
 
 library(dados)
-view(diamante)
 
 ggplot(diamante, aes(x = quilate)) +
   geom_histogram(binwidth = 0.5)
