@@ -187,13 +187,11 @@ incomum
 ### Sabemos que os diamantes não podem ter largura de 0 mm, então esses 
 ### valores devem estar incorretos. Ao fazer EDA, descobrimos dados 
 ### faltantes codificados como 0, que nunca teríamos encontrado 
-### simplesmente procurando por NAs.
-
-### No futuro, poderemos optar por recodificar estes valores como NAs, a 
-### fim de evitar cálculos enganosos. Também podemos suspeitar que as 
-### medidas de 32 mm e 59 mm são implausíveis: esses diamantes têm mais 
-### de uma polegada de comprimento, mas não custam centenas de milhares 
-### de dólares!
+### simplesmente procurando por NAs.do a diantes, nós podemos escolher
+### recodificar estes valores como NAs, a fim de evitar cálculos enganosos. 
+### Também podemos suspeitar que as medidas de 32 mm e 59 mm são implausíveis: 
+### esses diamantes têm mais de uma polegada de comprimento, mas não custam 
+### centenas de milhares de dólares!
 
 ### É uma boa prática repetir sua análise com e sem valores discrepantes. 
 ### Se eles tiverem um efeito mínimo nos resultados e você não conseguir 
