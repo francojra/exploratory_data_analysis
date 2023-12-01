@@ -248,8 +248,8 @@ dados::voos |>
   mutate(
     cancelado = is.na(horario_saida),
     hora_programada = saida_programada %/% 100,
-    min_programada = saida_programada %% 100,
-    saida_programada = hora_programada + (min_programada / 60)
+    min_programado = saida_programada %% 100,
+    saida_programada = hora_programada + (min_programado / 60)
   ) |> 
   ggplot(aes(x = saida_programada)) + 
   geom_freqpoly(aes(color = cancelado), binwidth = 1/4)
@@ -334,11 +334,11 @@ ggplot(milhas, aes(x = rodovia, y = fct_reorder(classe, rodovia, median))) +
 
 ### Duas variáveis categóricas: -------------------------------
 
-### Para visualizar a covariação entre duas variáveis categóricas, você irá necessitar
+### Para visualizar a covariação entre variáveis categóricas, você irá necessitar
 ### contar o número de observações para cada combinação dos níveis dessas variáveis
 ### categóricas. Uma maneira de fazer isso é contar com o geom_count() integrado:
 
-ggplot(diamonds, aes(x = cut, y = color)) +
+ggplot(diamante, aes(x = corte, y = cor)) +
   geom_count()
 
 ### O tamanho de cada círculo no gráfico exibe quantas observações ocorrem em cada
