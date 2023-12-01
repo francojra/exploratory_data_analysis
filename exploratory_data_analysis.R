@@ -348,14 +348,14 @@ ggplot(diamante, aes(x = corte, y = cor)) +
 ### Outra abordagem para explorar a relação entre essas variáveis é calcular as
 ### contagens com dplyr:
 
-diamonds |> 
-  count(color, cut)
+diamante |> 
+  count(cor, corte)
 
 ### Em seguida, visualize com geom_tile() e a estética (aesthetic) de preechimento:
 
-diamonds |> 
-  count(color, cut) |>  
-  ggplot(aes(x = color, y = cut)) +
+diamante |> 
+  count(cor, corte) |>  
+  ggplot(aes(x = cor, y = corte)) +
   geom_tile(aes(fill = n))
 
 ### Se as variáveis categóricas estão desordenadas, você pode querer usar o pacote de 
