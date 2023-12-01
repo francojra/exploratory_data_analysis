@@ -308,15 +308,16 @@ ggplot(diamante, aes(x = corte, y = preco)) +
 ### contra-intuitiva de que diamantes de melhor qualidade são normalmente mais 
 ### baratos! Nos exercícios, você será desafiado a descobrir o porquê.
 
-### cut é um fator ordenado: razoável é pior que bom, que por suas vez é pior que
+### corte é um fator ordenado: razoável é pior que bom, que por suas vez é pior que
 ### muito bom e assim por diante. Muitas variáveis categóricas não tem uma ordem
-### intrínseca, então você pode querer reordenar elas para tornar mais informativo.
+### intrínseca, então você pode querer reordenar elas para tornar uma exibição
+### mais informativa.
 ### Um caminho para isso é usar a fct_reorder(). Você irá aprender mais sobre essa
-### função na seção 16.4, mas nós queremos dar uma rápida pré-visualização do uso
-### dela. Por exemplo, pegue a variável class dos dados mpg. Você pode estar interessado
-### em saber como a quilometragem da rodovia varia entre as classes:
+### função na seção 16.4, mas nós queremos dar a você uma rápida pré-visualização do uso
+### dela. Por exemplo, pegue a variável classe dos dados milhas. Você pode estar 
+### interessado em saber como a quilometragem da rodovia varia entre as classes:
 
-ggplot(mpg, aes(x = class, y = hwy)) +
+ggplot(milhas, aes(x = class, y = hwy)) +
   geom_boxplot()
 
 ### Para tornar a tendência mais fácil de visualizar, nós podemos reordenar as classes
