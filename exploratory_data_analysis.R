@@ -317,7 +317,7 @@ ggplot(diamante, aes(x = corte, y = preco)) +
 ### dela. Por exemplo, pegue a variável classe dos dados milhas. Você pode estar 
 ### interessado em saber como a quilometragem da rodovia varia entre as classes:
 
-ggplot(milhas, aes(x = class, y = hwy)) +
+ggplot(milhas, aes(x = classe, y = rodovia)) +
   geom_boxplot()
 
 ### Para tornar a tendência mais fácil de visualizar, nós podemos reordenar as classes
