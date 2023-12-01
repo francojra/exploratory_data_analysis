@@ -273,7 +273,7 @@ dados::voos |>
 ggplot(diamante, aes(x = preco)) + 
   geom_freqpoly(aes(color = corte), binwidth = 500, linewidth = 0.75)
 
-### Note que o ggplot2 usa uma escala de cor ordenada para cut porque ele está definido
+### Note que o ggplot2 usa uma escala de cor ordenada para corte porque ele está definido
 ### como um fator ordenado nos dados. Você irá aprender mais sobre isso na seção 16.6.
 
 ### A aparência padrão de geom_freqpoly() não é tão útil aqui porque a altura, 
@@ -284,8 +284,8 @@ ggplot(diamante, aes(x = preco)) +
 ### Ao invés da contagem (frequência), nós iremos exibir a densidade (density), que
 ### é a contagem padronizada para que a área sob cada polígono de frequência seja um.
 
-ggplot(diamonds, aes(x = price, y = after_stat(density))) + 
-  geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
+ggplot(diamante, aes(x = preco, y = after_stat(density))) + 
+  geom_freqpoly(aes(color = corte), binwidth = 500, linewidth = 0.75)
 
 ### Note que nós estamos mapeando a densidade para o eixo y, mas como densidade não
 ### é uma variável do banco de dados diamonds, nós precisamos primeiro calcular ela.
