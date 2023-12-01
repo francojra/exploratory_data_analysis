@@ -321,15 +321,15 @@ ggplot(milhas, aes(x = classe, y = rodovia)) +
   geom_boxplot()
 
 ### Para tornar a tendência mais fácil de visualizar, nós podemos reordenar as classes
-### baseado no valor mediano de hwy:
+### baseado no valor mediano de rodovia:
 
-ggplot(mpg, aes(x = fct_reorder(class, hwy, median), y = hwy)) +
+ggplot(milhas, aes(x = fct_reorder(classe, rodovia, median), y = rodovia)) +
   geom_boxplot()
 
 ### Se você tem nomes longos de variáveis, geom_boxplot() irá trabalhar melhor se você
 ### virar em 90º. Você pode fazer isso trocando os eixos x e y.
 
-ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
+ggplot(milhas, aes(x = rodovia, y = fct_reorder(classe, rodovia, median))) +
   geom_boxplot()
 
 ### Duas variáveis categóricas: -------------------------------
