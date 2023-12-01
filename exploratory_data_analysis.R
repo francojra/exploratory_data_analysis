@@ -262,16 +262,16 @@ dados::voos |>
 
 ### Se variação descreve o comportamento dentro de uma variável, covariação descreve
 ### o comportamento entre variáveis. Covariação é a tendência em que os valores de
-### duas ou mais variáveis variam juntas em um caminho relacionado. O melhor caminho
+### duas ou mais variáveis variam juntas de maneira relacionada. O melhor caminho
 ### para ver a covariação é visualizar a relação entre duas ou mais variáveis.
 
 ### Uma variável categórica e uma numérica: -----------------
 
 ### Por exemplo, vamos explorar como o preço do diamante varia com a qualidade dele
-### (medida pelo corte (cut)) usando geom_frenqpoly()
+### (medida pelo corte) usando geom_frenqpoly():
 
-ggplot(diamonds, aes(x = price)) + 
-  geom_freqpoly(aes(color = cut), binwidth = 500, linewidth = 0.75)
+ggplot(diamante, aes(x = preco)) + 
+  geom_freqpoly(aes(color = corte), binwidth = 500, linewidth = 0.75)
 
 ### Note que o ggplot2 usa uma escala de cor ordenada para cut porque ele está definido
 ### como um fator ordenado nos dados. Você irá aprender mais sobre isso na seção 16.6.
