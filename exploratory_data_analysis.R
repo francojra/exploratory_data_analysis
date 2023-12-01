@@ -287,19 +287,19 @@ ggplot(diamante, aes(x = preco)) +
 ggplot(diamante, aes(x = preco, y = after_stat(density))) + 
   geom_freqpoly(aes(color = corte), binwidth = 500, linewidth = 0.75)
 
-### Note que nós estamos mapeando a densidade para o eixo y, mas como densidade não
-### é uma variável do banco de dados diamonds, nós precisamos primeiro calcular ela.
+### Note que nós estamos mapeando a densidade para o eixo y, mas como density não
+### é uma variável do banco de dados diamante, nós precisamos primeiro calcular ela.
 ### Nós usamos a função afer_stat() para fazer isso.
 
 ### Há algo bastante surpreendente neste gráfico - parece que os diamantes razoáveis 
-### (a qualidade mais baixa) têm o preço médio mais alto! Mas talvez seja porque 
+### (de qualidade mais baixa) têm o preço médio mais alto! Mas talvez seja porque 
 ### os polígonos de frequência são um pouco difíceis de interpretar – há muita 
 ### coisa acontecendo neste gráfico.
 
 ### Um gráfico visualmente mais simples para explorar essa relação são os boxplot
 ### lado a lado.
 
-ggplot(diamonds, aes(x = cut, y = price)) +
+ggplot(diamante, aes(x = corte, y = preco)) +
   geom_boxplot()
 
 ### Agora nós vemos muito menos informações sobre a distribuição, mas os boxplots
