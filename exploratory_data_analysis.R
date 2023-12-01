@@ -303,7 +303,8 @@ ggplot(diamante, aes(x = corte, y = preco)) +
   geom_boxplot()
 
 ### Agora nós vemos muito menos informações sobre a distribuição, mas os boxplots
-### são mais compactos uma comparação mais fácil entre eles. Isto apoia a descoberta 
+### são muito mais compactos então nós podemos mais facilmente comparar eles
+### (e se ajusta mais em um gráfico). Isto apoia a descoberta 
 ### contra-intuitiva de que diamantes de melhor qualidade são normalmente mais 
 ### baratos! Nos exercícios, você será desafiado a descobrir o porquê.
 
