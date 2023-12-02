@@ -418,7 +418,7 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
 
 ### cut_width(x, width), conforme usado acima, divide x em compartimentos de 
 ### largura (width). Por padrão, os boxplots parecem praticamente os mesmos 
-### (exceto pelo número de valores discrepantes), independentemente de 
+### (exceto pelo número de valores discrepantes) independentemente de 
 ### quantas observações existem, então é difícil dizer que cada boxplot resume
 ### um diferente número de pontos. Uma maneira de mostrar isso é tornar a 
 ### largura do boxplot proporcional ao número de pontos com varwidth = TRUE.
