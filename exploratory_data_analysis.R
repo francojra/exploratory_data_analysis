@@ -371,10 +371,10 @@ diamante |>
 ### entre tamanho de carat e preço do diamante: diamantes com mais carat tem preços
 ### mais altos. A relação é exponencial.
 
-smaller <- diamonds |> 
-  filter(carat < 3)
+menores_diamantes <- diamante |> 
+  filter(quilate < 3)
 
-ggplot(smaller, aes(x = carat, y = price)) +
+ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
   geom_point()
 
 ### (Nesta seção usaremos o conjunto de dados menor para manter o foco na 
