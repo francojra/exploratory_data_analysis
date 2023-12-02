@@ -455,26 +455,26 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
 
 library(tidymodels)
 
-diamonds <- diamonds |>
+diamante <- diamante |>
   mutate(
-    log_price = log(price),
-    log_carat = log(carat)
+    log_preco = log(preco),
+    log_quilate = log(quilate)
   )
 
-diamonds_fit <- linear_reg() |>
-  fit(log_price ~ log_carat, data = diamonds)
+diamante_fit <- linear_reg() |>
+  fit(log_preco ~ log_quilate, data = diamante)
 
-diamonds_aug <- augment(diamonds_fit, new_data = diamonds) |>
+diamante_aug <- augment(diamante_fit, new_data = diamante) |>
   mutate(.resid = exp(.resid))
 
-ggplot(diamonds_aug, aes(x = carat, y = .resid)) + 
+ggplot(diamante_aug, aes(x = quilate, y = .resid)) + 
   geom_point()
 
 ### Uma vez que você tem removido a forte relação entre quilate e preço,
 ### você pode ver o esperado da relação entre corte e preço: relativo ao
 ### tamanho deles, diamantes de melhor qualidade (corte) são mais caros.
 
-ggplot(diamonds_aug, aes(x = cut, y = .resid)) + 
+ggplot(diamante_aug, aes(x = corte, y = .resid)) + 
   geom_boxplot()
 
 ### Nós não discutimos modelagem nesse livro porque entender o que são os 
