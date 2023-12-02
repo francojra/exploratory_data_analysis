@@ -367,8 +367,8 @@ diamante |>
 
 ### Você já viu uma ótima maneira de visualizar a covariação entre duas variáveis 
 ### numéricas: desenhar um gráfico de dispersão com geom_point(). Você pode ver a
-### covariação com o padrão dos pontos. Por exemplo, você pode ver uma relação positiva
-### entre tamanho de carat e preço do diamante: diamantes com mais carat tem preços
+### covariação com um padrão dos pontos. Por exemplo, você pode ver uma relação positiva
+### entre quilate e preço do diamante: diamantes com mais quilates tem preços
 ### mais altos. A relação é exponencial.
 
 menores_diamantes <- diamante |> 
@@ -380,14 +380,14 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
 ### (Nesta seção usaremos o conjunto de dados menor para manter o foco na 
 ### maior parte dos diamantes menores que 3 quilates)
 
-### Gráficos de dispersão se tornam menos usuais a medida que seu conjunto
+### Gráficos de dispersão se tornam menos usuais à medida que seu conjunto
 ### de dados cresce, porque os pontos se acumulam, e se amontoam em áreas 
 ### de preto uniforme, tornando difícil julgar diferenças na densidade dos
-### dados em torno do espaço bidimensional, bem como difícil de ver a 
+### dados em torno do espaço bidimensional, bem como difícil de ver alguma 
 ### tendência. Você já tem visto uma forma de corrigir esse problema: usando
-### usando a estética (aesthetic) alpha e adicionando transparência.
+### a estética (aesthetic) alpha para adicionar transparência.
 
-ggplot(smaller, aes(x = carat, y = price)) + 
+ggplot(menores_diamantes, aes(x = quilate, y = preco)) + 
   geom_point(alpha = 1 / 100)
 
 ### Mas usar transparência pode ser desafiador para conjunto de dados grandes.
