@@ -442,9 +442,9 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
 ### de uma variável para controlar o valor da segunda.
 
 ### Os modelos são ferramentas para extrair padrões dos dados. Por exemplo, considere
-### os dados diamonds. É difícil entender a relação entre corte e preço, porque corte
+### os dados diamantes. É difícil entender a relação entre corte e preço, porque corte
 ### e quilate, e quilate e preço são intimamente relacionados. É possível usar o modelo
-### para remover a forte relação entre preço e quilate então nós podemos explorar as
+### para remover a forte relação entre preço e quilate, então nós podemos explorar as
 ### complexidades que permanecem. O seguinte código ajusta o modelo que prediz preço de
 ### quilate e então calcula os resíduos (a diferença entre o valor predito e o valor real).
 ### Os resíduos nos dão uma visão do preço do diamante, uma vez que o efeito do quilate
