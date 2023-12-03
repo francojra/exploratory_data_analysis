@@ -432,7 +432,7 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
 ### - Como você pode descrever a relação implícita no padrão?
 ### - Quão forte é a relação implícita no padrão?
 ### - Quais outras variáveis podem afetar a relação?
-### - O relacionamento muda se você observar subgrupos individuais de dados?
+### - A relação muda se você observar subgrupos individuais dos dados?
 
 ### Os padrões nos seus dados revelam relações, por exemplo, eles revelam covariação.
 ### Se pensarmos na variação como um fenômeno que cria incerteza, covariação é
