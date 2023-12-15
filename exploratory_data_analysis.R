@@ -391,7 +391,7 @@ ggplot(menores_diamantes, aes(x = quilate, y = preco)) +
   geom_point(alpha = 1 / 100)
 
 ### Mas usar transparência pode ser desafiador para conjunto de dados grandes.
-### Outra solução é usar o bin (compartimentos/caixas). Previamente, você usou geom_histogram() e 
+### Outra solução é usar intervalos (bins). Previamente, você usou geom_histogram() e 
 ### geom_freqpoly() para bin em uma dimensão. Agora você irá aprender como usar
 ### geom_bin2d() e geom_hex() para bins em duas dimensões.
 
